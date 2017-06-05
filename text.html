@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Match</title>
+        
+        <!-- Linking CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        
+        <!-- Linking Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Linking jQuery CDN -->
+        <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+        <!-- Linking jQuery Flip CDN -->
+        <script src="/assets/javascript/flip/dist/jquery.flip.min.js"></script>
+        
+        <!-- Linking JavaScript -->
+        <!--<script src="assets/javascript/script.js"></script>-->
+        
+    </head>
+    
+    <body>
+        <header> 
+            <h1> Welcome! </h1>
+            <h3>Click on the cards to make matches. </h3>
+        </header>
+        <!--
+        <div class="container">
+            <div class="row">    
+                <div col-md-3 id="left">
+                    <div class="flip"> 
+                        <div class="front">
+                            <img src="assets/images/cardback.png">
+                        </div> 
+                        <div class="back"> 
+                            <img src="/assets/images/a_hearts.png" alt="" />
+                        </div> 
+                        
+                    </div>
+                </div>
+                
+                <div col-md-3 id="right">
+                    <div class="flip"> 
+                        <div class="front">
+                            <img src="assets/images/cardback.png">
+                        </div> 
+                        <div class="back"> 
+                            <img src="/assets/images/a_hearts.png" alt="" />
+                        </div> 
+                        
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+        -->
+        
+        
+        
+        
+        
+        
+        <div id="grid-containter">
+        <div class="card-grid">
+          <div class="front" ><img src="assets/images/cardback.png"></div>
+          <div class="back"><img src="assets/images/a_spades.png"></div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>
+        <div class="card-grid">
+          <div class="front">Front</div>
+          <div class="back">Back</div>
+        </div>    
+      </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <script src="https://cdn.rawgit.com/download/jQuery-Touch-Events/0.9.0/src/jquery.mobile-events.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/v1.1.2/dist/jquery.flip.min.js"></script>
+        
+        <script>
+            /*$(function(){
+                $(".flip").flip({
+                    trigger: 'click'
+                });
+            });*/
+            
+            
+            
+            
+            $(function(){
+        prettyPrint();
+        
+        $(".card-grid").flip({
+          trigger: 'click'
+        });
+
+        $("#card-1").flip();
+
+        $("#card-2").flip({
+          axis: 'x',
+          trigger: 'click'
+        });
+
+        $("#card-3").flip({
+          axis: 'x',
+          trigger: 'click',
+          reverse: true
+        });
+
+        $("#card-4").flip({
+          trigger: 'manual'
+        });
+
+        $("#flip-btn").click(function(){
+          $("#card-4").flip(true);
+        });
+
+        $("#unflip-btn").click(function(){
+          $("#card-4").flip(false);
+        });
+
+        $("#toggle-btn").click(function(){
+          $("#card-4").flip('toggle');
+        });
+    
+        $("#card-5").flip({
+          axis: 'y',
+          trigger: 'click'
+        });
+        $("#axis-x-btn").click(function(){
+          $("#card-5").flip({axis: 'x'});
+        });
+        $("#axis-y-btn").click(function(){
+          $("#card-5").flip({axis: 'y'});
+        });
+        $("#reverse-true-btn").click(function(){
+          $("#card-5").flip({reverse: true});
+        });
+        $("#reverse-false-btn").click(function(){
+          $("#card-5").flip({reverse: false});
+        });
+        $("#card-6").flip({
+          trigger: 'click'
+        });
+        $('#assign-done').click(function(){
+          $("#card-6").on('flip:done',function(){
+            $(this).fadeOut(400,function(){
+              $(this).fadeIn();
+            });
+          });
+        });
+        $("#card-7").flip({
+          trigger: 'click'
+        });
+        $('#assign-change').click(function(){
+          $("#card-7").on('flip:change',function(){
+            $(this).flip('toggle');
+          });
+        });
+        var not = function(axis){
+            if (axis == 'x'){
+             return 'y';
+            }else{
+                return 'x';
+            }
+        }
+        var c7_nextAxis = 'y';
+        $('#toggleaxis').click(function(){
+          c7_nextAxis = not(c7_nextAxis);
+          $('.card').flip({axis: c7_nextAxis});
+        });
+        $("#card-fluid").flip({
+          axis: 'y',
+          trigger: 'click',
+      forceWidth: false,
+      forceHeight: false
+        }).find('.front, .back').css({
+      'width': '100%',
+      'height': '100%'
+    });
+      });
+        </script>
+        
+    
+    
+    
+    </body>
+
+</html>
